@@ -16,8 +16,7 @@ $courses = [
     ]
 ];
 
-echo "{$courses['backend'][0]}";
-
+echo " <br> {$courses['backend'][0]}";
 
 class User
 {
@@ -26,9 +25,12 @@ class User
 
 $user = new User;
 
-echo "<br> $user->name quiere aprender {$courses['backend'][0]}";
 
-$courses = ['backend' => 'PHP'];
+$courses2 = ['backend' => 'PHP'];
+
+echo "<br> $user->name quiere aprender {$courses2['backend'][0]}";
+
+
 
 $teacher = 'albert';
 $albert = 'Profesor';
