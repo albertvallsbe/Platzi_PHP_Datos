@@ -44,4 +44,5 @@ function getTeacher()
 
 $teacher = 'Italo';
 
+
 echo "<br> {${getTeacher()}} enseña PHP";
