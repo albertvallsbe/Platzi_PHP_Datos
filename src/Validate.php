@@ -14,10 +14,14 @@ class Validate
         return (bool) filter_var($value, FILTER_VALIDATE_URL);
     }
 
-    public static function pwd($value)
+    public static function password($value)
     {
-        $regex = 
-        return (bool) filter_var($value, FILTER_VALIDATE_REGEXP);
+        // Option 1: Use the "FILTER_VALIDATE_REGEXP"
+
+        // $regex = "/^[0-9]{6,8}$/";
+        // return (bool) filter_var($value, FILTER_VALIDATE_REGEXP, ["options" => ["regexp" => $regex]]);
+
+        // Option 2: Use the "preg_match"
+        return (bool) preg_match('/^[0-9]{6,8}$/', $value);
     }
-}
 }
