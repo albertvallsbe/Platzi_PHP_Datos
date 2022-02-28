@@ -59,3 +59,38 @@ echo provaSalutacions();
 // return;  -> retorna un resultado
 
 echo "<br>";
+
+$saludo = function ($name) // variable que requiere lógica
+{
+    return "Hola, $name";
+};
+
+echo $saludo('Prova');
+
+
+echo "<br>----------------------<br>";
+echo "Classe 10 -> Closures";
+echo "<br><br>";
+
+
+function saludar(Closure $lang, $name)
+{
+    return $lang($name);
+}
+
+$es = function ($name)
+{
+    return "Hola, $name";
+};
+$en = function($name)
+{
+    return "Hello, $name";
+};
+
+echo saludar($es, 'Maria');
+echo "<br>";
+echo saludar($en, 'Maria');
+
+echo "<br>----------------------<br>";
+echo "Classe 11 -> ";
+echo "<br><br>";
