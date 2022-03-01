@@ -78,12 +78,10 @@ function saludar(Closure $lang, $name)
     return $lang($name);
 }
 
-$es = function ($name)
-{
+$es = function ($name) {
     return "Hola, $name";
 };
-$en = function($name)
-{
+$en = function ($name) {
     return "Hello, $name";
 };
 
@@ -92,5 +90,41 @@ echo "<br>";
 echo saludar($en, 'Maria');
 
 echo "<br>----------------------<br>";
-echo "Classe 11 -> ";
+echo "Classe 11 -> Array Simple";
 echo "<br><br>";
+
+$courses = [
+    'javascript',
+    'laravel',
+    'PHP',
+    'vuejs'
+];
+echo "<pre>";
+var_dump($courses);
+echo "<br>";
+
+echo "<br>----------------------<br>";
+echo "Classe 12 -> Array Complejo";
+echo "<br><br>";
+
+$courses2 = [
+    'frontend' => 'javascript',
+    'framework' => 'laravel',
+    'backend' => 'PHP'
+];
+
+foreach ($courses2 as $key => $value) {
+    echo "$key: $value <br>";
+};
+echo "<br>";
+foreach ($courses2 as $course2) {
+    echo "$course2 <br>";
+};
+echo "<br>";
+
+function upper($coursee)
+{
+    echo strtoupper($coursee) . " <br>";
+}
+
+array_walk($courses2, 'upper');
