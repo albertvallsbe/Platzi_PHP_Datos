@@ -128,3 +128,34 @@ function upper($coursee)
 }
 
 array_walk($courses2, 'upper');
+
+/**
+ * array_key_exists('frontend', $courses2);
+ * in_array('javascript', $courses2);
+ * array_keys($courses)
+ * array_values($courses)
+ */
+
+ 
+echo "<br>----------------------<br>";
+echo "Classe 13 -> Funciones PHP";
+echo "<br><br>";
+
+$cursos3 = [
+    'javascript', 
+    'PHP', 
+    'laravel'];
+sort($cursos3); // ksort rsort
+
+// var_dump($cursos3);
+
+var_dump(array_slice($cursos3, 1)); //elimina el primer registre
+var_dump(array_chunk($cursos3, 2)); //divideix l'array en dues parts
+
+// array_shift($cursos3);
+// array_pop($cursos3);
+// array_unshift($cursos3);
+// array_push($cursos3);
+// array_flip($cursos3);
+
+
