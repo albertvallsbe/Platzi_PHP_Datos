@@ -136,15 +136,16 @@ array_walk($courses2, 'upper');
  * array_values($courses)
  */
 
- 
+
 echo "<br>----------------------<br>";
 echo "Classe 13 -> Funciones PHP";
 echo "<br><br>";
 
 $cursos3 = [
-    'javascript', 
-    'PHP', 
-    'laravel'];
+    'javascript',
+    'PHP',
+    'laravel'
+];
 sort($cursos3); // ksort rsort
 
 // var_dump($cursos3);
@@ -159,3 +160,55 @@ var_dump(array_chunk($cursos3, 2)); //divideix l'array en dues parts
 // array_flip($cursos3);
 
 
+
+echo "<br>----------------------<br>";
+echo "Classe 14 -> Comparación";
+echo "<br><br>";
+
+
+$courses14 = ['javascript', 'php'];
+$wishes = ['php', 'laravel', 'javascript', 'vuejs'];
+
+var_dump(array_diff($wishes, $courses14));
+
+$arrayA = [1, 2, 3, 4, 5];
+$arrayB = [3, 4, 5, 6, 7, 8];
+
+var_dump(array_diff($arrayB, $arrayA));
+
+
+
+echo "<br>----------------------<br>";
+echo "Classe 15 -> Unión";
+echo "<br><br>";
+
+
+$frontend = [
+    'frontend' => 'javascript'
+];
+$backend = [
+    'backend' => 'php',
+    'framework' => 'laravel'
+];
+
+var_dump($frontend + $backend);
+
+//Unió amb funció de PHP
+
+$frontend = [
+    'javascript'
+];
+$backend = [
+    'php',
+    'laravel'
+];
+
+var_dump(array_merge($frontend, $backend));
+var_dump(array_merge_recursive($frontend, $backend));
+
+// Combinació
+
+$courses15 = ['frontend', 'javascript'];
+$backend = ['php', 'laravel'];
+
+var_dump(array_combine($courses15, $backend));
